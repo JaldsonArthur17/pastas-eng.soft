@@ -1,0 +1,288 @@
+/* Reset e Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lexend', sans-serif; /* font-display */
+  background-color: #f6f6f8; /* bg-background-light */
+  color: #111118; /* text-[#111118] */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Wrapper Principal */
+.page-wrapper {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  overflow-x: hidden; /* overflow-x-hidden */
+}
+
+.layout-container {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(240, 240, 244, 0.1); /* border-b-[#f0f0f4]/10 */
+  padding: 0.75rem 1rem; /* py-3 px-4 */
+  position: sticky; /* sticky */
+  top: 0; /* top-0 */
+  background-color: rgba(246, 246, 248, 0.8); /* bg-background-light/80 */
+  backdrop-filter: blur(4px); /* backdrop-blur-sm */
+  z-index: 10; /* z-10 */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
+  color: #4747eb; /* primary color for icon */
+}
+
+.logo-icon {
+  width: 1.5rem; /* size-6 (24px) */
+  height: 1.5rem;
+}
+
+.logo-text {
+  color: #111118; /* text-[#111118] */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 700; /* font-bold */
+  line-height: 1.25; /* leading-tight */
+  letter-spacing: -0.015em; /* tracking-[-0.015em] */
+}
+
+.nav-container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 1rem; /* gap-4 default */
+}
+
+/* Navegação */
+.nav-links {
+  display: none; /* hidden by default */
+}
+
+.nav-item {
+  color: #111118; /* text-[#111118] */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  line-height: 1.5; /* leading-normal */
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-item:hover {
+  color: #4747eb; /* hover:text-primary */
+}
+
+/* Header CTA Button */
+.header-cta {
+  display: flex;
+  min-width: 84px;
+  max-width: 480px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px; /* rounded-full */
+  height: 2.5rem; /* h-10 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  background-color: #4747eb; /* bg-primary */
+  color: #ffffff; /* text-white */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 700; /* font-bold */
+  line-height: 1.5; /* leading-normal */
+  letter-spacing: 0.015em; /* tracking-[0.015em] */
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.header-cta:hover {
+  background-color: rgba(71, 71, 235, 0.9); /* hover:bg-primary/90 */
+}
+
+/* Conteúdo Principal */
+.main-content {
+  flex: 1;
+  padding: 3rem 1rem; /* py-12 px-4 */
+}
+
+.content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56rem; /* max-w-4xl (896px) */
+}
+/* Coluna do Formulário (Direita) */
+.form-card {
+  background-color: #ffffff; /* bg-white */
+  padding: 1.5rem; /* p-6 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* border-black/5 */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* gap-6 */
+}
+
+.form-label-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.label-text {
+  color: #111118;
+  font-size: 1rem; /* text-base */
+  font-weight: 500; /* font-medium */
+  line-height: 1.5;
+  padding-bottom: 0.5rem; /* pb-2 */
+}
+
+.form-input,
+.form-textarea {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0.25rem; /* rounded (4px) */
+  color: #111118;
+  background-color: #f6f6f8; /* bg-background-light */
+  border: 1px solid #dcdce5; /* border-[#dcdce5] */
+  padding: 15px; /* p-[15px] */
+  font-size: 1rem; /* text-base */
+  font-weight: 400; /* font-normal */
+  line-height: 1.5;
+  transition: all 0.15s;
+  outline: none;
+}
+
+.form-input {
+  height: 3.5rem; /* h-14 */
+  resize: none;
+}
+
+.form-textarea {
+  min-height: 9rem; /* min-h-36 (144px) */
+  resize: vertical; /* resize-y */
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #636388; /* placeholder:text-[#636388] */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  box-shadow: 0 0 0 2px rgba(71, 71, 235, 0.5); /* ring-2 ring-primary/50 */
+  border-color: transparent; /* Implicitly handled by ring usually, but outline-0 removes default border behavior in some agents, let's keep it clean */
+  outline: none; /* focus:outline-0 */
+}
+
+.submit-btn {
+  display: flex;
+  min-width: 84px;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px; /* rounded-full */
+  height: 3rem; /* h-12 */
+  padding-left: 1.5rem; /* px-6 */
+  padding-right: 1.5rem;
+  background-color: #4747eb; /* bg-primary */
+  color: #ffffff;
+  font-size: 1rem; /* text-base */
+  font-weight: 700; /* font-bold */
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+  border: none;
+  transition: background-color 0.15s;
+}
+
+.submit-btn:hover {
+  background-color: rgba(71, 71, 235, 0.9); /* hover:bg-primary/90 */
+}
+
+/* Utility */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsividade (Media Queries) */
+
+/* SM (640px) */
+@media (min-width: 640px) {
+  .app-header {
+    padding-left: 2.5rem; /* sm:px-10 */
+    padding-right: 2.5rem;
+  }
+
+  .nav-container {
+    gap: 2rem; /* sm:gap-8 */
+  }
+
+  .main-content {
+    padding-top: 5rem; /* sm:py-20 */
+    padding-bottom: 5rem;
+  }
+  
+  .page-title {
+    font-size: 3rem; /* sm:text-5xl */
+  }
+
+  .form-card {
+    padding: 2rem; /* sm:p-8 */
+  }
+}
+
+/* MD (768px) */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex; /* md:flex */
+    align-items: center;
+    gap: 2.25rem; /* gap-9 */
+  }
+
+  .main-content {
+    padding-top: 6rem; /* md:py-24 */
+    padding-bottom: 6rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+  }
+
+  .info-column {
+    gap: 3rem; /* md:gap-12 */
+  }
+}
+
+/* LG (1024px) */
+@media (min-width: 1024px) {
+  .contact-grid {
+    gap: 5rem; /* lg:gap-20 */
+  }
+}
