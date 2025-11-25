@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend', sans-serif; 
+    background-color: #f6f6f8; 
+    color: #111118; 
+}
+
+/* Grid System */
+.grid-poli {
+    display: grid;
+    grid-template-columns: 1fr; /* grid-cols-1 */
+    gap: 1.5rem; /* gap-6 */
+    padding: 1rem; /* p-4 */
+}
+
+/* Policy Cards */
+.card-poli {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem; /* gap-4 */
+    border-radius: 1.8rem; /* rounded-lg */
+    border: 1px solid #dcdce5; /* border-[#dcdce5] */
+    background-color: #ffffff; /* bg-white */
+    padding: 1.5rem; /* p-6 */
+    transition: box-shadow 0.3s; /* duration-300 */
+}
+
+.card-poli:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+}
+
+.icon-env {
+    color: #4747eb; 
+    background-color: #eff0ff; 
+    width: 48px;  
+    height: 48px;
+    border-radius: 50%; 
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.icon-env i {
+    font-size: 24px;
+}
+
+.card-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* gap-1 */
+}
+
+.card-titu {
+    color: #111118;
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700; /* font-bold */
+    line-height: 1.25; /* leading-tight */
+}
+
+.text-card {
+    color: #636388;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 400; /* font-normal */
+    line-height: 1.5; /* leading-normal */
+}
+/* Media Queries (Responsividade) */
+@media (min-width: 640px) { /* sm */
+
+    .grid-poli {
+        grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 */
+    }
+}

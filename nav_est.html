@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"rel="stylesheet"/>
+    <link rel="stylesheet" href="/Css's/nav_style.css">
+    <script src="/Js's/script_nav.js" defer></script>
+    <title>estrutura nav</title>
+</head>
+<body>
+              <!--primeira classe: define o container geral-->
+    <div class="pg-wrap">
+              <!--segunda classe: ajuda na organização do layout-->
+      <div class="lay-cont">
+              <!--terceira classe: define o cabeçalho do site-->
+        <header class="site-hd">
+              <!--quarta classe: ajuda a definir o conteúdo interno do cabeçalho-->      
+          <div class="hd-intern">
+              <!--quinta classe: ajuda a manter a logo e o nome juntos--> 
+            <div class="logo-cont">
+              <!--sexta classe: ajuda a organizar e agrupar o ícone svg da logo --> 
+              <div class="logo-icon">
+              <!--sétima classe: ajuda a definir o ícone vetorial da marca--> 
+                <img src="/imgs/logo.png" alt="logo icon">
+              </div>
+              <!--oitava classe: ajuda a organizar e agrupar o texto da logo --> 
+              <h2 class="logo-text">RecuperaMente</h2>
+            </div>
+              <!--nona classe: ajuda a organizar e agrupar o menu de navegação --> 
+            <nav class="desk-nav">
+              <!--décima classe: ajuda a organizar e agrupar os links de navegação --> 
+              <a class="nav-link" href="#">Início</a>
+              <a class="nav-link" href="#">Sobre Nós</a>
+            </nav>
+              <!--décima primeira classe: ajuda a organizar e agrupar os botões de ação -->
+            <div class="btn-prim-sec">
+              <a class="btn-primary" href="#">Conecte-se</a>
+              <a class="btn-secondary" href="#">Cadastre-se</a>
+            </div>
+
+            <!--décima segunda classe: ajuda a organizar a responsividade dos botões em telas menores-->
+            <button class="btn-menu" id="menuBtn">
+              <img src="./imgs/menuHamburg.svg" alt="hamburguer icon">
+            </button>
+          </div>
+
+            <!--décima terceira classe: ajuda a organizar o menu de navegação pra mobile -->
+            <nav class="mob-nav" id="mobileNav">
+              <a class="nav-link" href="#">Início</a>
+              <a class="nav-link" href="#">Calendário</a>
+              <a class="nav-link" href="#">Sobre Nós</a>
+              <a class="nav-link" href="#">Contato</a>
+              <a class="nav-link" href="#">Política de Privacidade</a>
+
+              <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-end; width: 100%;">
+                <a class="btn-primary" href="#" style="justify-content: center; width: 100%; max-width: 200px;">Conecte-se</a>
+                <a class="btn-secondary" href="#" style="justify-content: center; width: 100%; max-width: 200px;">Cadastre-se</a>
+              </div>
+          </nav>
+            </nav>
+        </header>
+      </div>
+    </div>
+    
+</body>
+</html>

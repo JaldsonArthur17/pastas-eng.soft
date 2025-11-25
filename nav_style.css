@@ -1,0 +1,303 @@
+/* remove margens e paddins padrões */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* aqui se define a fonte global e as cores padrões do site */
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: #F8F9FA; 
+    color: #343A40;
+}
+
+/* aqui envolve tudo da página, como ocupar 100% da altura e organizar tudo enquanto evita
+scroll lateral*/
+.pg-wrap {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    overflow-x: hidden; 
+}
+
+/* ajuda a expandir o conteúdo até o rodapé */
+.lay-cont {
+    display: flex;
+    height: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+/* aqui faz com que o header fique grudado no topo durante o scroll */
+.site-hd {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(248, 249, 250, 0.8); 
+}
+
+/* aqui é o container interno do header, nele a gente centraliza tudo, define largura máxima,
+faz alinhamentos, impede quebra de linha etc*/
+.hd-intern {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+    padding: 1rem 1.5rem; 
+}
+
+/* aqui se mantém o ícone com o texto da logo lado a lado com espaçamento*/
+.logo-cont {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #343A40;
+}
+
+/* aqui a gente define o tamamho do svg e a cor*/
+.logo-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #C8B6FF; 
+}
+
+/* aqui a gente define o tamanho e outros ajustes do espaçamento entre das letras*/
+.logo-text {
+    font-size: 1.25rem; 
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+}
+
+/* aqui a gente define o menu destktop como oculto*/
+.desk-nav, .btn-prim-sec {
+    display: none; 
+}
+
+/* aqui a gente define o estilo dos links*/
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.nav-link:hover {
+    color: #C8B6FF; 
+}
+
+/* aqui a gente centraliza o conteúdo principal e define a dsitância do topo e base*/
+.main-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding-top: 1.25rem; 
+    padding-bottom: 1.25rem;
+}
+
+.btn-primary {
+    display: flex;
+    min-width: 84px;
+    max-width: 480px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem; 
+    height: 2.5rem; 
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    background-color: #4747eb; 
+    color: #ffffff;
+    font-size: 0.875rem; 
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    border: none;
+    transition: opacity 0.15s;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    display: flex;
+    min-width: 84px;
+    max-width: 480px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem; 
+    height: 2.5rem; 
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    background-color: #e5e7eb; 
+    color: #343a40; 
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    border: none;
+    transition: background-color 0.15s;
+    text-decoration: none;
+}
+
+.btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #E9ECEF; 
+    color: #343A40;            
+    font-size: 1.5rem;        
+    width: 2.5rem;             
+    height: 2.5rem;            
+    border-radius: 40%;        
+    cursor: pointer;
+    transition: background-color 0.2s;          
+}
+
+/* Efeito ao passar o mouse */
+.btn-menu:hover {
+    color: #4747eb;            
+}
+
+.btn-secondary:hover {
+    background-color: #d1d5db; 
+}
+
+.mob-nav {
+    display: none; /* Começa escondido para não quebrar o layout */
+    flex-direction: column;
+    background-color: #F8F9FA;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(229, 231, 235, 0.5);
+    width: 100%;
+    align-items: flex-end; 
+    text-align: right;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.mob-nav.active {
+    display: flex;
+}
+
+/* links do menu mobile */
+.mob-nav .nav-link {
+    padding: 1rem 0;             /* Mais espaço para o dedo clicar */
+    border-bottom: 1px solid #f3f4f6;
+    width: 100%;                 /* Ocupa a largura toda */
+    color: #4b5563;              /* Cinza mais suave */
+    font-size: 1.1rem;           /* Letra um pouco maior */
+    font-weight: 500;
+    transition: color 0.2s, padding-right 0.2s;
+}
+
+.mob-nav .nav-link:hover {
+    color: #4747eb;
+    padding-right: 1rem;  
+    border-bottom-color: #4747eb;
+}
+
+/* aqui nessa sessão é feita a configuração pra diferentes tamanhos de telas
+organizando espaçamentos, alinhamentos, quantidade de colunas etc*/
+@media (min-width: 540px) {
+    .hero-section, .text-section, .features-section {
+    padding-top: 6rem; 
+    padding-bottom: 6rem;
+}
+/* aqui se define o tamanho dos titulos*/
+.hero-title {
+    font-size: 3rem;
+}
+/* aqui se define o tamanho dos subtitulos*/
+.hero-subtitle {
+    font-size: 1.125rem; 
+}
+/* aqui se defiine a largura do botão como automática*/
+.cta-button {
+    width: auto;
+}
+}
+
+/* aqui nessa sessão é feita a configuração pra diferentes tamanhos de telas
+organizando espaçamentos, alinhamentos, quantidade de colunas etc*/
+@media (min-width: 670px) {
+
+    .logo-cont {
+        flex: 1;
+    }
+
+    .desk-nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+}
+    .btn-prim-sec {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Isso garante que eles fiquem colados na direita */
+        gap: 0.75rem;
+        margin-left: 2rem;
+}
+
+    .mob-nav {
+        display: none !important;
+    }
+/* botão menu hamburguer */
+    .btn-menu {
+        display: none;
+}
+
+/* aqui é definido quantas colunas existem num layout de grid css
+no caso, cria 2 colunas com 1 fração da largura*/
+.features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* aqui definimos as configurações pra telas maiores como notebooks, como espaçamento
+entre textos e imagens  */
+@media (min-width: 1024px) {
+
+.hero-layout {
+    flex-direction: row;
+    gap: 4rem; 
+}
+
+/* aqui o texto é alinhado a esquerda e faz a coluna ocupar metade da largura*/
+.hero-text-column {
+    text-align: left;
+    width: 50%; 
+}
+
+/* aqui é feito o alinhamento do botão em relação ao início da coluna ao invés de ficar 
+centralizado*/
+.cta-button {
+    align-self: flex-start; 
+}
+/* aqui a imagem vai ocupar a outra metade do layout e mantem o hero dividido em
+50% / 50% */
+.hero-image-column {
+    width: 50%; 
+}
+/* aqui o tamanho do título fica maior em telas grandes*/
+.hero-title {
+    font-size: 3.75rem; 
+}
+/* aqui a gente transforma o grid em 3 colunas e cada uma com 1 fração de espaço*/
+.features-grid {
+    grid-template-columns: repeat(3, 1fr); 
+    }
+}
